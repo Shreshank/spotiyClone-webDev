@@ -26,6 +26,10 @@ body{
     width: 75vw;
 }
 
+.home{
+    margin: 5px;
+}
+
 .home ul li{
     width: 14px;
     list-style: none;
@@ -38,6 +42,7 @@ body{
 .library{
     min-height: 78vh;
     position: relative;
+    margin: 5px;
 }
 
 .heading{
@@ -139,7 +144,7 @@ body{
     flex-wrap: wrap;
     margin: 30px 0;
     overflow-y: scroll;
-    max-height: 67vh;
+    max-height: calc(100vh - 255px);
 }
 
 .spotifyPlaylist .cards{
@@ -349,6 +354,10 @@ body{
 
 @media (max-width: 1400px) {
 
+    body{
+        background-color: #121212;
+    }
+
     .left{
         /* background-color: red; */
         position: absolute;
@@ -356,6 +365,10 @@ body{
         transition: all 0.3s;
         z-index: 10;
         width: 360px;
+        padding: 0 10px;
+        height: 99.99vh;
+        background-color: #121212;
+        border-radius: 7px;
     }
 
     .left .close{
@@ -368,6 +381,7 @@ body{
 
     .right{
         width: 100vw;
+        margin: 0;
     }
 
     .playBar{
@@ -399,10 +413,19 @@ body{
 
     .footer{
         bottom: 30px;
+        padding: 0;
     }
 
     .cards{
         height: 235px;
+    }
+
+    .home{
+        margin: 0 5px;
+    }
+
+    .library{
+        margin: 0 5px;
     }
 
 }
@@ -422,11 +445,17 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        position: absolute;
+        top: 0;
+        height: 165px;
     }
 
     .playBar2 > *{
         text-align: center;
         padding: 8px;
+    }
+    .cardContainer{
+        max-height: calc(100vh - 340px);
     }
 }
 
@@ -441,5 +470,14 @@ body{
     .cards img{
         object-fit: cover;
         height: 190px;
+    }
+    .headBtn{
+        padding: 0 0px;
+    }
+    .headBtn *{
+        width: 60px;
+    }
+    .left{
+        width: 310px;
     }
 }
