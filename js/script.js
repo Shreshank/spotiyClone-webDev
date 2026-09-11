@@ -1,5 +1,33 @@
 var currentSong = new Audio()
 let i = 0;
+
+// const library = {
+//     "Angry_(mood)": { title: "Angry Mood", description: "Calm your Anger", songs: ["01 Dilbar - Satyameva Jayate.mp3", "02 Akh Lad Jave - Loveratri.mp3", "02 Hawa Hawa - Mubarakan (Mika) 320Kbps.mp3", "04 Proper Patola - Namaste England.mp3", "05 Main Tera Boyfriend - Raabta (Arijit Singh) 190Kbps.mp3", "Airlift - Dil Cheez Tujhe Dedi.mp3", "Akhiyaan Milavanga - Arijit Singh.mp3", "Ankhiyon Se Goli Mare - Pati Patni Aur Woh.mp3"] },
+//     "Bright_(mood)": { title: "Bright Songs", description: "Bright Songs for you", songs: ["Bad Boy - Saaho Hindi.mp3", "Bheegi Bheegi - Neha Kakkar.mp3", "Bijli Ki Taar - Tony Kakkar.mp3", "Booty Shake_192(PagalWorld.com.se).mp3", "Care Ni Karda - Yo Yo Honey Singh.mp3", "Ceti Mar_320(PagalWorld.com.se).mp3", "Chandigarh Mein - Good Newwz.mp3", "Chhor Denge_192(PagalWorld.com.se).mp3"] },
+//     "Chill_(mood)": { title: "Just Chill", description: "Yes, Just Chill", songs: ["Chocolate - Tony Kakkar Riyaz.mp3", "Coca Cola - Luka Chuppi.mp3", "Dheeme Dheeme - Pati Patni Aur Woh.mp3", "Duniyaa - Luka Chuppi.mp3", "Dus Bahane 2 - Baaghi 3.mp3", "Gali Gali - KGF.mp3", "Garmi - Street Dancer 3D.mp3", "Genda Phool - Badshah.mp3"] },
+//     "cs": { title: "Copyright Songs", description: "Cover Songs for you", songs: ["Ghungroo - War.mp3", "Goa Beach - Neha Kakkar.mp3", "Hauli Hauli - De De Pyaar De.mp3", "Haye Ni Meri Moto - Superhit Tiktok Song.mp3", "Heelein Toot Gayi_320(PagalWorld.com.se).mp3", "Hello Ji - Kanika Kapoor.mp3", "Hui Malang - Malang.mp3"] },
+//     "Dark_(mood)": { title: "Dark Horse", description: "Dark Songs for you", songs: ["Illegal Weapon 2 - Street Dancer 3D.mp3", "Ishq Ka Raja - Addy Nagar.mp3", "Jab Teri Yaad Aayegi - I Shoj Kytrak.mp3", "Jhalak Dikhla Jaa Reloaded - The Body.mp3", "Junooniyat - Mujhko Barsaat Bana Lo.mp3", "Kamaal - Badshah.mp3", "Kamariya Hila Rahi Hai - Pawan Singh.mp3", "Koka - Khandaani Shafakhana.mp3"] },
+//     "Diljit": { title: "Diljit Dosanjh", description: "Diljit Dosanjh hits", songs: ["Kya Baat Ay - Harrdy Sandhu.mp3", "Laal Chunariya - Akull.mp3", "Lagdi Lahore Di - Street Dancer 3D.mp3", "Laila -Tony Kakkar.mp3", "Lamborghini - Jai Mummy Di.mp3", "Loca - Yo Yo Honey Singh.mp3", "Move - Raftaar.mp3", "Mumbai Dilli Di Kudiyaan - SOTY2.mp3"] },
+//     "Funky_(mood)": { title: "Go Funky", description: "Lets go Funky", songs: ["Mummy Nu Pasand - Jai Mummy Di.mp3", "Mungda - Total Dhamaal.mp3", "Munna Badnaam Hua - Dabangg 3.mp3", "Muqabla - Street Dancer 3D.mp3", "Naach Meri Rani - Guru Randhawa.mp3", "Naah Goriye - Bala.mp3", "Nachi Nachi - Street Dancer 3D.mp3", "Nadiyon Paar_320(PagalWorld.com.se).mp3"] },
+//     "karanAujla": { title: "Karan Aujla", description: "Karan Aujla for you", songs: ["Nazar Lag Jayegi - Millind Gaba 190Kbps.mp3", "Nehu Da Vyah - Neha Kakkar.mp3", "O Saki Saki - Batla House.mp3", "Odhani - Made in China.mp3", "Paani Paani_320(PagalWorld.com.se).mp3", "Pachtaoge - Atif Aslam.mp3", "Pal Pal Dil Ke Paas - Arijit Singh.mp3"] },
+//     "Love_(mood)": { title: "I Love You", description: "Love is in the air", songs: ["Pallo Latke - Shaadi Mein Zaroor Aana.mp3", "Phir Na Milen Kabhi - Malang.mp3", "Poster Lagwa Do - Luka Chuppi.mp3", "Psycho Saiyaan - Saaho - Hindi.mp3", "Radhe Radhe - Dream Girl.mp3", "Saiyaan Ji - Yo Yo Honey Singh.mp3", "Sakhiyan 2 - Bell Bottom.mp3", "Sauda Khara Khara - Good Newwz.mp3"] },
+//     "ncs": { title: "Sleep Songs", description: "Songs for you", songs: ["Serena - Safari.mp3", "She Dont Know - Millind Gaba.mp3", "Shiddat - Akhiyan Udeek Diyan_320(PagalWorld.com.se).mp3", "Shona Shona - Tony Kakkar.mp3", "The Hook Up Song - SOTY 2.mp3", "The Wakhra Song - Judgementall Hai Kya.mp3", "Thodi Jagah - Marjaavaan.mp3", "Title Track_320(PagalWorld.com.se).mp3"] },
+//     "Uplifting_(mood)": { title: "Get up", description: "You can do it!", songs: ["Titliaan_320(PagalWorld.com.se).mp3", "Tu Hi Yaar Mera - Pati Patni Aur Woh.mp3", "Tum Hi Aana - Marjaavaan.mp3", "Vaaste - Dhvani Bhanushali.mp3", "Vardaan - CarryMinati.mp3", "Yaad Piya Ki Aane Lagi - Neha Kakkar.mp3", "Yalgaar - Ajey Nagar (Carryminati).mp3"] }
+// };
+
+const library = {
+    "Angry_(mood)": { title: "Angry Mood", description: "Calm your Anger", songs: [] },
+    "Bright_(mood)": { title: "Bright Songs", description: "Bright Songs for you", songs: ["Kya Baat Ay - Harrdy Sandhu.mp3", "Laal Chunariya - Akull.mp3", "Lagdi Lahore Di - Street Dancer 3D.mp3", "Laila -Tony Kakkar.mp3"] },
+    "Chill_(mood)": { title: "Just Chill", description: "Yes, Just Chill", songs: [] },
+    "cs": { title: "Copyright Songs", description: "Cover Songs for you", songs: [] },
+    "Dark_(mood)": { title: "Dark Horse", description: "Dark Songs for you", songs: [] },
+    "Diljit": { title: "Diljit Dosanjh", description: "Diljit Dosanjh hits", songs: [] },
+    "Funky_(mood)": { title: "Go Funky", description: "Lets go Funky", songs: [] },
+    "karanAujla": { title: "Karan Aujla", description: "Karan Aujla for you", songs: [] },
+    "Love_(mood)": { title: "I Love You", description: "Love is in the air", songs: [] },
+    "ncs": { title: "Sleep Songs", description: "Songs for you", songs: [] }
+};
+
 async function removeAllEventListeners(element) {
         const events = element.eventListeners;
         if (events) {
@@ -43,18 +71,20 @@ async function cleanUpCode() {
 
 
 async function getSongs(folder) {
-    let a = await fetch(`./songs/${folder}/`);
-    let b = await a.text();
-    let div = document.createElement('div');
-    div.innerHTML = b;
-    let aTag = div.getElementsByTagName('a');
-    let songs = [];
-    for (let index = 0; index < aTag.length; index++) {
-        if(aTag[index].href.endsWith('.mp3')){
-            songs.push(aTag[index].href.split(`/songs/${folder}/`)[1]);
-        }
-    }
-    return songs;
+    // let a = await fetch(`./songs/${folder}/`);
+    // let b = await a.text();
+    // let div = document.createElement('div');
+    // div.innerHTML = b;
+    // let aTag = div.getElementsByTagName('a');
+    // let songs = [];
+    // for (let index = 0; index < aTag.length; index++) {
+    //     if(aTag[index].href.endsWith('.mp3')){
+    //         songs.push(aTag[index].href.split(`/songs/${folder}/`)[1]);
+    //     }
+    // }
+    // return songs;
+
+    return library[folder]?.songs || [];
 }
 
 async function setSongs(folder){
@@ -303,9 +333,11 @@ function playMusic(folder){
 }   
 
 async function CardAlbum(fold){
+    // let a = await fetch(`./songs/${fold}/info.json`)
+    // let folde = await a.json();
 
-    let a = await fetch(`./songs/${fold}/info.json`)
-    let folde = await a.json();
+    const folde = library[fold];
+    if (!folde) return false;
     let name = folde.title
     let desc = folde.description
     let cards = document.createElement("div");
@@ -327,17 +359,21 @@ async function CardAlbum(fold){
 }
 
 async function displayAlbums(){
-    let a = await fetch('./songs/')
-    let response = await a.text();
-    let div = document.createElement("div")
-    div.innerHTML = response;
-    let anchors = div.getElementsByTagName("a");
-    let array = Array.from(anchors);
-    for (let index = 0; index < array.length; index++) {
-        const e = array[index];
-        if(e.href.includes("/songs/")){
-            await CardAlbum(e.href.split("/").slice(-1)[0]);
-        }
+    // let a = await fetch('./songs/')
+    // let response = await a.text();
+    // let div = document.createElement("div")
+    // div.innerHTML = response;
+    // let anchors = div.getElementsByTagName("a");
+    // let array = Array.from(anchors);
+    // for (let index = 0; index < array.length; index++) {
+    //     const e = array[index];
+    //     if(e.href.includes("/songs/")){
+    //         await CardAlbum(e.href.split("/").slice(-1)[0]);
+    //     }
+
+
+    for (const folder of Object.keys(library)) {
+        await CardAlbum(folder);
     }
 
     Array.from(document.getElementsByClassName("cards")).forEach(e => {
